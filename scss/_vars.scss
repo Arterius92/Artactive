@@ -1,0 +1,59 @@
+@import "_fonts.scss";
+@import "_null-style.scss";
+// Color
+
+$white: #ffffff;
+$white-bg: #faf8fb;
+$red: #fb0275;
+$purple-font: #7f38bd;
+$purple-order: #883eca;
+$purple-footer-bg: #65269d;
+$black: #383d52;
+$gray: #5e606a;
+$light-gray: #868995;
+
+// Width
+$width: 100vw;
+// Width content
+$width-content: 1170px;
+
+@mixin adaptive-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$addMobSize: $addSize + $addSize * 0.7;
+	@media (max-width: 767px) {
+		font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / 1920));
+	}
+	@media (min-width: 767px) {
+		font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / 1920));
+	}
+}
+
+@mixin flex($jc, $ai) {
+	display: flex;
+	justify-content: $jc;
+	align-items: $ai;
+}
+
+@mixin openSans {
+	font-family: "Open Sans", sans-serif;
+}
+@mixin mullerBold {
+	font-family: "Muller", sans-serif;
+	font-weight: bold;
+	font-style: normal;
+}
+@mixin mullerHeavy {
+	font-family: "Muller", sans-serif;
+	font-weight: 900;
+	font-style: normal;
+}
+@mixin mullerMedium {
+	font-family: "Muller", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+}
+@mixin mullerExtraBold {
+	font-family: "Muller", sans-serif;
+	font-weight: 800;
+	font-style: normal;
+}

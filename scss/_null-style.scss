@@ -1,0 +1,77 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+.wrapper {
+	margin: 0 auto;
+}
+/* Убираем внутренние отступы и стандартную стилизацию для всех ul и ol */
+ul[class],
+ol[class],
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+	line-height: 1.2;
+}
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+/* Элементы a сбрасываем стили */
+a[class],
+a,
+a:visited {
+	text-decoration: none;
+}
+/* Упрощаем работу с изображениями */
+img {
+	max-width: 100%;
+	display: block;
+}
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+	margin-top: 1em;
+}
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+button[class],
+button,
+div,
+button:active,
+button:focus,
+a[class],
+a {
+	padding: 0;
+	cursor: pointer;
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+}
