@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Artactive</title>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap"
-		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -15,82 +15,79 @@
 
 	<div class="wrapper">
 		<div class="wrapper__mask"></div>
-		<img class="wrapper__lines" src="img/lines.png" alt="Wrapper_lines">
-		<section class="wrap wrap__home">
-			<img class="home__bg" src="img/home/home-bg.png" alt="Bg_home">
-			<div class="container">
-				<div class="home__body">
-					<div class="header-container">
-						<div class="header">
-							<a href="#" class="logo">Artactive</a>
-							<div class="mini-menu">
-								<div class="mini-menu__hamburger">
-									<span></span>
-									<span></span>
-									<span></span>
-								</div>
-								<div class="mini-menu__cross">
-									<span></span>
-									<span></span>
-								</div>
-							</div>
-							<div class="menu">
-								<ul>
-									<li><a href="#">О нас</a></li>
-									<li><a href="#">Услуги</a></li>
-									<li><a href="#">Отзывы</a></li>
-									<li><a href="#">FAQ</a></li>
-									<li><a href="#">Контакты</a></li>
-								</ul>
-								<div class="callback-mini">
-									<div class="phone-number">+7 (920) 148 81 31</div>
-									<button class="callback__button">Заказать звонок</button>
-								</div>
-							</div>
-							<div class="callback">
-								<div class="phone-number">+7 (920) 148 81 31</div>
-								<button class="callback__button">Заказать звонок</button>
-							</div>
-						</div>
-					</div>
-					<div class="home__content">
-						<div class="home__image">
-							<img src="img/home/home-img.png" alt="Home_image">
 
+		<!--Section Home-->
+		<section class="home">
+			<!--Header-->
+			<div class="container header-container">
+				<header class="header">
+					<a class="logo" href="#">Artactive</a>
+					<div class="mini-menu">
+						<div class="mini-menu__hamburger">
+							<span></span>
+							<span></span>
+							<span></span>
 						</div>
-						<div class="home__text">
-							<h1 class="home__title">Размер<br>Не имеет<br>Значения!</h1>
-							<p class="home__subtitle">
-								Оперативная полиграфия и широкоформатная печать любого размера
-							</p>
-							<div class="home__order home-order">
-								<button class="button-big home-order__button">Заказать печать</button>
-								<div class="home-order__delivery">с доставкой по Ярославлю и Ярославской области </div>
-							</div>
+						<div class="mini-menu__cross">
+							<span></span>
+							<span></span>
 						</div>
 					</div>
-				</div>
-				<div class="mouse">
-					<img src="img/mouse.png" alt="Mouse_move">
+					<div class="menu">
+						<ul class="menu__list">
+							<li class="menu__list-item"><a class="menu__link" href="#">О нас</a></li>
+							<li class="menu__list-item"><a class="menu__link" href="#">Услуги</a></li>
+							<li class="menu__list-item"><a class="menu__link" href="#">Отзывы</a></li>
+							<li class="menu__list-item"><a class="menu__link" href="#">FAQ</a></li>
+							<li class="menu__list-item"><a class="menu__link" href="#">Контакты</a></li>
+						</ul>
+						<div class="callback callback--mini">
+							<a class="callback__phone callback__phone--mini" href="tel:+79201488131">+7 (920) 148 81 31</a>
+							<button class="callback__btn">Заказать звонок</button>
+						</div>
+					</div>
+					<div class="callback">
+						<a class="callback__phone" href="tel:+79201488131">+7 (920) 148 81 31</a>
+						<button class="callback__btn">Заказать звонок</button>
+					</div>
+				</header>
+			</div>
+			<!--End Header-->
+			<!--Home content-->
+			<div class="container">
+				<div class="home__content">
+					<div class="home__image">
+						<img src="img/home/home-img.png" alt="Home_image">
+					</div>
+					<div class="home__text">
+						<h1 class="home__title">Размер<br>Не имеет<br>Значения!</h1>
+						<p class="home__subtitle">Оперативная полиграфия и широкоформатная печать любого размера</p>
+						<div class="home__order">
+							<button class="button home__order-btn">Заказать печать</button>
+							<div class="home__order-delivery">с доставкой по Ярославлю и Ярославской области</div>
+						</div>
+					</div>
 				</div>
 			</div>
+			<!--End Home content-->
+			<div class="mouse">
+				<img src="img/mouse.png" alt="Mouse_move">
+			</div>
 		</section>
+		<!--End Section Home-->
 
-		<section class="wrap wrap__about">
+		<!--Section About-->
+		<section class="about">
 			<div class="container">
-				<div class="about">
+				<div class="about__body">
 					<div class="about__image about-image">
 						<img class="about-image__big" src="img/about/about-img-1170.png" alt="About_image">
 						<img class="about-image__middle" src="img/about/about-img-750.png" alt="About_image">
 						<img class="about-image__small" src="img/about/about-img-320.png" alt="About_image">
 					</div>
 					<div class="about__text">
-						<h2 class="title about__title">
-							1. О нас
-						</h2>
-						<h3 class="subtitle about__subtitle">
-							Полный спектр услуг — от дизайна до печати
-						</h3>
+						<h2 class="title about__title">1. О нас</h2>
+						<h3 class="subtitle about__subtitle">Полный спектр услуг — от дизайна до печати</h3>
 						<p class="paragraph about__paragraph">
 							К вашим услугам мы предлагаем полный спектр работ, начиная от печати
 							открыток, чертежей, баннеров, растяжек, создания буклетов и эксклюзивных календарей, и
@@ -106,7 +103,8 @@
 						</p>
 						<p class="paragraph about__paragraph">
 							При этом работа выполняется в максимально сжатые сроки и не в ущерб
-							качеству конечного результата, которое неизменно остается на высоте.</p>
+							качеству конечного результата, которое неизменно остается на высоте.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -115,47 +113,237 @@
 				<span></span>
 			</div>
 		</section>
+		<!--End Section About-->
 
-		<section class="wrap wrap__services">
-			<div class="wrap__title title">2. Услуги</div>
-			<div class="container">
-				<div class="services-block1">
-					<div class="services__text">
-						<h2 class="services__number">1</h2>
-						<h3 class="subtitle services__subtitle">
-							Широкоформатная печать
-							баннеров, растяжек, афиш
-						</h3>
-						<ul class="services__list list">
-							<li class="list__item">подготовка макетов к печати, дизайн рекламных баннеров</li>
-							<li class="list__item">срочная печать за 3 часа</li>
-							<li class="list__item">проварка карманов и сварка нескольких изображений</li>
-							<li class="list__item">пробивка люверсов и вварка монтажных тросов</li>
-							<li class="list__item">изготовление цветопробы</li>
-							<li class="list__item">доставка баннеров</li>
-						</ul>
-						<div class="services__order services-order">
-							<div class="services-order__question">
-								Есть вопросы?<br />
+		<!--Section Services-->
+		<section class="services">
+
+			<!--Services First Block-->
+			<div class="services__first services-first">
+				<div class="container">
+					<h2 class="title services__title">2. Услуги</h2>
+					<div class="services__row services-first__row">
+						<div class="services__column services-first__column">
+							<div class="services__text">
+								<h2 class="services__number services-first__number">1</h2>
+								<h3 class="subtitle services__subtitle">Широкоформатная печать баннеров, растяжек, афиш</h3>
+								<ul class="services__list">
+									<li class="services__list-item">подготовка макетов к печати, дизайн рекламных баннеров</li>
+									<li class="services__list-item">срочная печать за 3 часа</li>
+									<li class="services__list-item">проварка карманов и сварка нескольких изображений</li>
+									<li class="services__list-item">пробивка люверсов и вварка монтажных тросов</li>
+									<li class="services__list-item">изготовление цветопробы</li>
+									<li class="services__list-item">доставка баннеров</li>
+								</ul>
+								<div class="services__order">
+									<div class="services__question">
+										<span>Есть вопросы?</span>
+										<span>Закажите консультацию</span>
+									</div>
+									<button class="services-first__btn button">Заказать</button>
+								</div>
+							</div>
+						</div>
+						<div class="services__column">
+							<div class="services__slider services-slider">
+								<div class="services-slider__slide">
+									<img class="services-slider__slide-img" src="img/services/1rst-block/slide-image1.jpg" alt="Slide1">
+								</div>
+								<div class="services-slider__slide">
+									<img class="services-slider__slide-img" src="img/services/1rst-block/slide-image2.jpg" alt="Slide2">
+								</div>
+								<div class="services-slider__slide">
+									<img class="services-slider__slide-img" src="img/services/1rst-block/slide-image3.jpg" alt="Slide3">
+								</div>
+							</div>
+							<div class="services-slider__description">
+								<div class="arrows services-slider__arrows">
+									<button class="arrows__prev services-slider__prev">
+										<i class="fas fa-chevron-left"></i>
+										<span></span>
+									</button>
+									<button class="arrows__next services-slider__next">
+										<span></span>
+										<i class="fas fa-chevron-right"></i>
+									</button>
+								</div>
+								<div class="services-slider__text">
+									Растяжка на ул. Ленина.
+								</div>
+							</div>
+						</div>
+						<div class="services__order services__order--tablet-screen">
+							<div class="services__question services__question--tablet-screen">
+								<span>Есть вопросы?</span>
 								<span>Закажите консультацию</span>
 							</div>
-							<button class="button-small services__button">Заказать</button>
-						</div>
-					</div>
-					<div class="services__slider slider">
-						<div class="slider__slide">
-							<img src="img/services/1rst-block/slide-image.jpg" alt="Slide">
+							<button class="button services-first__btn services-first__btn--tablet-screen ">Заказать</button>
 						</div>
 					</div>
 				</div>
 			</div>
+			<!--End Services First Block-->
+
+			<!--Services Second Block-->
+			<div class="services__second services-second">
+				<div class="container">
+					<div class="services__row services-second__row">
+						<div class="services__column services-second__column"></div>
+						<div class="services__column services-second__column">
+							<div class="services__text">
+								<h2 class="services__number services-second__number">2</h2>
+								<h3 class="subtitle services__subtitle">Широкоформатная печать для вашего интерьера</h3>
+								<p class="paragraph services__paragraph services-second__paragraph">
+									Печатаем широкоформатные фотографии на глянцевой и матовой фотобумаге разной плотности, на глянцевом и
+									матовом холсте или на самоклеющейся пленке. также можем предложить обработку и редактирование ваших
+									фотографий силами наших дизайнеров: композиции, фотоколлаж, ретушь, различные эффекты
+								</p>
+								<button class="button services-second__btn">Оставить заявку</button>
+							</div>
+						</div>
+					</div>
+					<div class="services-second__image">
+						<img src="img/services/2nd-block/interior.png" alt="">
+					</div>
+				</div>
+				<div class="vertical-lines">
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<!--End Services Second Block-->
+
+			<!--Services Third Block-->
+			<div class="services__third services-third">
+				<div class="container">
+					<div class="services__row services-third__row">
+						<div class="services__column services-third__column">
+							<div class="services__text">
+								<h2 class="services__number services-third__number">3</h2>
+								<h3 class="subtitle services__subtitle">Оперативная полиграфия — от визитки до баннера</h3>
+								<p class="paragraph services__paragraph services-third__paragraph">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+									et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+									aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+									dolore eu fugiat nulla pariatur.
+								</p>
+								<p class="paragraph services__paragraph services-third__paragraph">
+									Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+									officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error.
+								</p>
+							</div>
+						</div>
+						<div class="services__column services-third__column">
+							<div class="services-third__image-letters">
+								<img src="img/services/3rd-block/03-1.png" alt="">
+							</div>
+						</div>
+						<div class="services__column services-third__column">
+							<div class="services__callback services-callback">
+								<div class="services-callback__question">
+									<span>Есть вопросы?</span>
+									<span>Оставьте заявку на консультацию</span>
+								</div>
+								<form class="services__form services-form" action="#">
+									<div class="services-form__inputs">
+										<input class="services-form__input" type="text" placeholder="Имя">
+										<input class="services-form__input" type="tel" placeholder="Телефон">
+									</div>
+									<button class="button services-form__btn">Отправить</button>
+								</form>
+							</div>
+							<div class="services-third__image-plane">
+								<img class="plane" src="img/services/3rd-block/03-2.png" alt="">
+								<img class="plane-750" src="img/services/3rd-block/03-2(1).png" alt="">
+								<img class="prick-line ibg" src="img/services/3rd-block/03-3.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--End Services Third Block-->
 		</section>
+		<!--End Section Services-->
+
+		<!--Section Recall-->
+		<section class="recall">
+			<div class="container">
+				<h2 class="title recall__title">4. Отзывы</h2>
+			</div>
+			<div class="recall__container">
+				<div class="recall__slider recall-slider">
+					<div class="recall-slider__slide">
+						<div class="recall-slider__item">
+							<div class="recall__photo">
+								<img src="img/recall/04-1.jpeg" alt="">
+							</div>
+							<div class="recall__text">
+								<p class="paragraph recall__paragraph">
+									Обратился в компанию АртАктив за визитками. Это мой первый опыт, поэтому немного нервничал, не знал, с
+									чего начать. Остался доволен, потому что мне всё объяснили, показали и сделали по высшему разряду.
+									Советую!
+								</p>
+								<div class="recall__author">Александров Максим, 24 года</div>
+								<a class="recall__link" href="vk.com/mr.sharp">vk.com/mr.sharp</a>
+							</div>
+						</div>
+					</div>
+					<div class="recall-slider__slide">
+						<div class="recall-slider__item">
+							<div class="recall__photo">
+								<img src="img/recall/04-1.jpeg" alt="">
+							</div>
+							<div class="recall__text">
+								<p class="paragraph recall__paragraph">
+									Обратился в компанию АртАктив за визитками. Это мой первый опыт, поэтому немного нервничал, не знал, с
+									чего начать. Остался доволен, потому что мне всё объяснили, показали и сделали по высшему разряду.
+									Советую!
+								</p>
+								<div class="recall__author">Александров Максим, 24 года</div>
+								<a class="recall__link" href="vk.com/mr.sharp">vk.com/mr.sharp</a>
+							</div>
+						</div>
+					</div>
+					<div class="recall-slider__slide">
+						<div class="recall-slider__item">
+							<div class="recall__photo">
+								<img src="img/recall/04-1.jpeg" alt="">
+							</div>
+							<div class="recall__text">
+								<p class="paragraph recall__paragraph">
+									Обратился в компанию АртАктив за визитками. Это мой первый опыт, поэтому немного нервничал, не знал, с
+									чего начать. Остался доволен, потому что мне всё объяснили, показали и сделали по высшему разряду.
+									Советую!
+								</p>
+								<div class="recall__author">Александров Максим, 24 года</div>
+								<a class="recall__link" href="vk.com/mr.sharp">vk.com/mr.sharp</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="arrows recall-slider__arrows">
+					<button class="arrows__prev recall-slider__prev">
+						<i class="fas fa-chevron-left"></i>
+						<span></span>
+					</button>
+					<button class="arrows__next recall-slider__next">
+						<span></span>
+						<i class="fas fa-chevron-right"></i>
+					</button>
+				</div>
+			</div>
+		</section>
+		<!--End Section Recall-->
 	</div>
 
 
 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/hubslider.js"></script>
+	<script src="js/slick.min.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
 

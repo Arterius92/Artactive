@@ -1,6 +1,5 @@
 @import "_fonts.scss";
-@import "_null-style.scss";
-// Color
+//* Color
 
 $white: #ffffff;
 $white-bg: #faf8fb;
@@ -12,9 +11,9 @@ $black: #383d52;
 $gray: #5e606a;
 $light-gray: #868995;
 
-// Width
+//* Width
 $width: 100vw;
-// Width content
+//* Width content
 $width-content: 1170px;
 
 @mixin adaptive-font($pcSize, $mobSize) {
