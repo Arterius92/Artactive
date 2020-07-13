@@ -5,21 +5,44 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Artactive</title>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
 
 	<div class="wrapper">
-		<div class="wrapper__mask"></div>
-
+		<!--Modal Mask-->
+		<div class="mask"></div>
+		<!--End Modal Mask-->
+		<!--Modal Window-->
+		<div class="modal">
+			<div class="modal__close">
+				<div class="modal__close-cross"></div>
+			</div>
+			<div class="modal__content">
+				<div class="order__question modal__order-question">
+					<span>Есть вопросы?</span>
+					<span>Закажите звонок</span>
+				</div>
+				<form class="form modal__form" action="#">
+					<div class="form__inputs modal__inputs">
+						<input class="form__input modal__input" type="text" placeholder="Имя">
+						<input class="form__input modal__input" type="tel" placeholder="Телефон">
+					</div>
+					<button class="button modal__btn">Отправить</button>
+				</form>
+			</div>
+		</div>
+		<!--End Modal Window-->
 		<!--Section Home-->
 		<section class="home">
 			<!--Header-->
-			<div class="container header-container">
+			<div class="container container--header">
 				<header class="header">
 					<a class="logo" href="#">Artactive</a>
 					<div class="mini-menu">
@@ -35,14 +58,18 @@
 					</div>
 					<div class="menu">
 						<ul class="menu__list">
-							<li class="menu__list-item"><a class="menu__link" href="#">О нас</a></li>
-							<li class="menu__list-item"><a class="menu__link" href="#">Услуги</a></li>
-							<li class="menu__list-item"><a class="menu__link" href="#">Отзывы</a></li>
-							<li class="menu__list-item"><a class="menu__link" href="#">FAQ</a></li>
-							<li class="menu__list-item"><a class="menu__link" href="#">Контакты</a></li>
+							<li class="menu__list-item"><a class="menu__link" href="#about"><span>О нас</span></a></li>
+							<li class="menu__list-item"><a class="menu__link" href="#services"><span>Услуги</span></a>
+							</li>
+							<li class="menu__list-item"><a class="menu__link" href="#recall"><span>Отзывы</span></a>
+							</li>
+							<li class="menu__list-item"><a class="menu__link" href="#faq"><span>FAQ</span></a></li>
+							<li class="menu__list-item"><a class="menu__link" href="#contact"><span>Контакты</span></a>
+							</li>
 						</ul>
 						<div class="callback callback--mini">
-							<a class="callback__phone callback__phone--mini" href="tel:+79201488131">+7 (920) 148 81 31</a>
+							<a class="callback__phone callback__phone--mini" href="tel:+79201488131">+7 (920) 148 81
+								31</a>
 							<button class="callback__btn">Заказать звонок</button>
 						</div>
 					</div>
@@ -77,7 +104,7 @@
 		<!--End Section Home-->
 
 		<!--Section About-->
-		<section class="about">
+		<section class="about" id="about">
 			<div class="container">
 				<div class="about__body">
 					<div class="about__image about-image">
@@ -116,27 +143,30 @@
 		<!--End Section About-->
 
 		<!--Section Services-->
-		<section class="services">
+		<section class="services" id="services">
 
 			<!--Services First Block-->
-			<div class="services__first services-first">
+			<div class="services__first services-first" id="services-first">
 				<div class="container">
 					<h2 class="title services__title">2. Услуги</h2>
 					<div class="services__row services-first__row">
 						<div class="services__column services-first__column">
 							<div class="services__text">
-								<h2 class="services__number services-first__number">1</h2>
-								<h3 class="subtitle services__subtitle">Широкоформатная печать баннеров, растяжек, афиш</h3>
+								<h2 class="services__number services__number--first">1</h2>
+								<h3 class="subtitle services__subtitle">Широкоформатная печать баннеров, растяжек, афиш
+								</h3>
 								<ul class="services__list">
-									<li class="services__list-item">подготовка макетов к печати, дизайн рекламных баннеров</li>
+									<li class="services__list-item">подготовка макетов к печати, дизайн рекламных
+										баннеров</li>
 									<li class="services__list-item">срочная печать за 3 часа</li>
-									<li class="services__list-item">проварка карманов и сварка нескольких изображений</li>
+									<li class="services__list-item">проварка карманов и сварка нескольких изображений
+									</li>
 									<li class="services__list-item">пробивка люверсов и вварка монтажных тросов</li>
 									<li class="services__list-item">изготовление цветопробы</li>
 									<li class="services__list-item">доставка баннеров</li>
 								</ul>
-								<div class="services__order">
-									<div class="services__question">
+								<div class="services-first__order">
+									<div class="services-first__question">
 										<span>Есть вопросы?</span>
 										<span>Закажите консультацию</span>
 									</div>
@@ -146,15 +176,21 @@
 						</div>
 						<div class="services__column">
 							<div class="services__slider services-slider">
-								<div class="services-slider__slide">
-									<img class="services-slider__slide-img" src="img/services/1rst-block/slide-image1.jpg" alt="Slide1">
-								</div>
-								<div class="services-slider__slide">
-									<img class="services-slider__slide-img" src="img/services/1rst-block/slide-image2.jpg" alt="Slide2">
-								</div>
-								<div class="services-slider__slide">
-									<img class="services-slider__slide-img" src="img/services/1rst-block/slide-image3.jpg" alt="Slide3">
-								</div>
+								<a class="services-slider__slide" data-fancybox="gallery"
+									href="img/services/1rst-block/slide-image1.jpg">
+									<img class="services-slider__slide-img"
+										src="img/services/1rst-block/slide-image1.jpg" alt="Растяжка на ул. Ленина.">
+								</a>
+								<a class="services-slider__slide" data-fancybox="gallery"
+									href="img/services/1rst-block/slide-image2.jpg">
+									<img class="services-slider__slide-img"
+										src="img/services/1rst-block/slide-image2.jpg" alt="Баннер на ул. Октября.">
+								</a>
+								<a class="services-slider__slide" data-fancybox="gallery"
+									href="img/services/1rst-block/slide-image3.jpg">
+									<img class="services-slider__slide-img"
+										src="img/services/1rst-block/slide-image3.jpg" alt="Фото на холсте.">
+								</a>
 							</div>
 							<div class="services-slider__description">
 								<div class="arrows services-slider__arrows">
@@ -172,12 +208,13 @@
 								</div>
 							</div>
 						</div>
-						<div class="services__order services__order--tablet-screen">
-							<div class="services__question services__question--tablet-screen">
+						<div class="services-first__order services-first__order--tablet-screen">
+							<div class="services-first__question services-first__question--tablet-screen">
 								<span>Есть вопросы?</span>
 								<span>Закажите консультацию</span>
 							</div>
-							<button class="button services-first__btn services-first__btn--tablet-screen ">Заказать</button>
+							<button
+								class="button services-first__btn services-first__btn--tablet-screen ">Заказать</button>
 						</div>
 					</div>
 				</div>
@@ -185,18 +222,21 @@
 			<!--End Services First Block-->
 
 			<!--Services Second Block-->
-			<div class="services__second services-second">
+			<div class="services__second services-second" id="services-second">
 				<div class="container">
 					<div class="services__row services-second__row">
 						<div class="services__column services-second__column"></div>
 						<div class="services__column services-second__column">
 							<div class="services__text">
-								<h2 class="services__number services-second__number">2</h2>
+								<h2 class="services__number services__number--second">2</h2>
 								<h3 class="subtitle services__subtitle">Широкоформатная печать для вашего интерьера</h3>
 								<p class="paragraph services__paragraph services-second__paragraph">
-									Печатаем широкоформатные фотографии на глянцевой и матовой фотобумаге разной плотности, на глянцевом и
-									матовом холсте или на самоклеющейся пленке. также можем предложить обработку и редактирование ваших
-									фотографий силами наших дизайнеров: композиции, фотоколлаж, ретушь, различные эффекты
+									Печатаем широкоформатные фотографии на глянцевой и матовой фотобумаге разной
+									плотности, на глянцевом и
+									матовом холсте или на самоклеющейся пленке. также можем предложить обработку и
+									редактирование ваших
+									фотографий силами наших дизайнеров: композиции, фотоколлаж, ретушь, различные
+									эффекты
 								</p>
 								<button class="button services-second__btn">Оставить заявку</button>
 							</div>
@@ -214,22 +254,27 @@
 			<!--End Services Second Block-->
 
 			<!--Services Third Block-->
-			<div class="services__third services-third">
+			<div class="services__third services-third" id="services-third">
 				<div class="container">
 					<div class="services__row services-third__row">
 						<div class="services__column services-third__column">
 							<div class="services__text">
 								<h2 class="services__number services-third__number">3</h2>
-								<h3 class="subtitle services__subtitle">Оперативная полиграфия — от визитки до баннера</h3>
+								<h3 class="subtitle services__subtitle">Оперативная полиграфия — от визитки до баннера
+								</h3>
 								<p class="paragraph services__paragraph services-third__paragraph">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-									et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-									aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+									incididunt ut labore
+									et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+									laboris nisi ut
+									aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+									velit esse cillum
 									dolore eu fugiat nulla pariatur.
 								</p>
 								<p class="paragraph services__paragraph services-third__paragraph">
 									Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-									officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error.
+									officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste
+									natus error.
 								</p>
 							</div>
 						</div>
@@ -239,17 +284,18 @@
 							</div>
 						</div>
 						<div class="services__column services-third__column">
-							<div class="services__callback services-callback">
-								<div class="services-callback__question">
+							<div class="order services-third__order">
+								<div class="order__question services-third__question">
 									<span>Есть вопросы?</span>
 									<span>Оставьте заявку на консультацию</span>
 								</div>
-								<form class="services__form services-form" action="#">
-									<div class="services-form__inputs">
-										<input class="services-form__input" type="text" placeholder="Имя">
-										<input class="services-form__input" type="tel" placeholder="Телефон">
+								<form class="form services-third__form" action="#">
+									<div class="form__inputs services-third__inputs">
+										<input class="form__input services-third__input" type="text" placeholder="Имя">
+										<input class="form__input services-third__input" type="tel"
+											placeholder="Телефон">
 									</div>
-									<button class="button services-form__btn">Отправить</button>
+									<button class="button services-third__btn">Отправить</button>
 								</form>
 							</div>
 							<div class="services-third__image-plane">
@@ -266,11 +312,11 @@
 		<!--End Section Services-->
 
 		<!--Section Recall-->
-		<section class="recall">
+		<section class="recall" id="recall">
 			<div class="container">
 				<h2 class="title recall__title">4. Отзывы</h2>
 			</div>
-			<div class="recall__container">
+			<div class="container container--recall">
 				<div class="recall__slider recall-slider">
 					<div class="recall-slider__slide">
 						<div class="recall-slider__item">
@@ -279,8 +325,10 @@
 							</div>
 							<div class="recall__text">
 								<p class="paragraph recall__paragraph">
-									Обратился в компанию АртАктив за визитками. Это мой первый опыт, поэтому немного нервничал, не знал, с
-									чего начать. Остался доволен, потому что мне всё объяснили, показали и сделали по высшему разряду.
+									Обратился в компанию АртАктив за визитками. Это мой первый опыт, поэтому немного
+									нервничал, не знал, с
+									чего начать. Остался доволен, потому что мне всё объяснили, показали и сделали по
+									высшему разряду.
 									Советую!
 								</p>
 								<div class="recall__author">Александров Максим, 24 года</div>
@@ -295,8 +343,10 @@
 							</div>
 							<div class="recall__text">
 								<p class="paragraph recall__paragraph">
-									Обратился в компанию АртАктив за визитками. Это мой первый опыт, поэтому немного нервничал, не знал, с
-									чего начать. Остался доволен, потому что мне всё объяснили, показали и сделали по высшему разряду.
+									Обратился в компанию АртАктив за визитками. Это мой первый опыт, поэтому немного
+									нервничал, не знал, с
+									чего начать. Остался доволен, потому что мне всё объяснили, показали и сделали по
+									высшему разряду.
 									Советую!
 								</p>
 								<div class="recall__author">Александров Максим, 24 года</div>
@@ -311,8 +361,10 @@
 							</div>
 							<div class="recall__text">
 								<p class="paragraph recall__paragraph">
-									Обратился в компанию АртАктив за визитками. Это мой первый опыт, поэтому немного нервничал, не знал, с
-									чего начать. Остался доволен, потому что мне всё объяснили, показали и сделали по высшему разряду.
+									Обратился в компанию АртАктив за визитками. Это мой первый опыт, поэтому немного
+									нервничал, не знал, с
+									чего начать. Остался доволен, потому что мне всё объяснили, показали и сделали по
+									высшему разряду.
 									Советую!
 								</p>
 								<div class="recall__author">Александров Максим, 24 года</div>
@@ -336,14 +388,139 @@
 			</div>
 		</section>
 		<!--End Section Recall-->
+
+		<!--Section FAQ-->
+		<section class="faq" id="faq">
+			<div class="container">
+				<h2 class="title faq__title">4. Частые вопросы (FAQ)</h2>
+				<div class="faq__questions-block">
+					<div class="faq__item">
+						<div class="faq__question-title">Что такое макет?</div>
+						<p class="paragraph faq__paragraph">
+							Макет — это будущее печатное изделие в электронном формате. Верстают (собирают) макет в
+							специализированном
+							программном обеспечении.
+						</p>
+					</div>
+					<div class="faq__item">
+						<div class="faq__question-title">Сколько времени занимает печать?</div>
+						<p class="paragraph faq__paragraph">
+							В том случае если изображение готово к печати, изготовление занимает около 3 часов. Также
+							время
+							изготовления зависит от нашей загруженности.
+						</p>
+					</div>
+					<div class="faq__item">
+						<div class="faq__question-title">У меня есть готовый макет?</div>
+						<p class="paragraph faq__paragraph">
+							Вы можете привезти его к нам в офис на любом удобном для вас носителе (диск, флешка). В
+							присутствии вас мы
+							обработаем ваш макет и отправим его в производство.
+						</p>
+					</div>
+					<div class="faq__item">
+						<div class="faq__question-title">Я не могу приехать к вам в офис</div>
+						<p class="paragraph faq__paragraph">
+							Отправьте нам изображение по электронной почте, укажите свой телефон. Мы свяжемся с вами для
+							уточнения
+							деталей. Готовое изделие мы доставим вам курьером.
+						</p>
+					</div>
+					<div class="faq__item">
+						<div class="faq__question-title">У меня нет макета</div>
+						<p class="paragraph faq__paragraph">
+							В нашем штате работают профессиональные дизайнеры, которые с ваших слов или в вашем
+							присутствии сверстают
+							макет, который после утверждения также будет отправлен в печать.
+						</p>
+					</div>
+					<div class="faq__item">
+						<div class="faq__question-title">Вызов курьера бесплатный?</div>
+						<p class="paragraph faq__paragraph">
+							В зависимости от стоимости заказа, курьер может доставить вам продукцию бесплатно (при
+							стоимости от 600
+							руб.) или от 150 руб. в пределах Ярославля и до 500 руб. в пределах Ярославской области.
+						</p>
+					</div>
+				</div>
+				<div class="order faq__order">
+					<img class="faq__order-img" src="img/faq/01-1170.png" alt="">
+					<div class="faq__order-content">
+						<div class="order__question faq__order-question">
+							<span>Остались вопросы?</span>
+							<span>Оставьте заявку на консультацию</span>
+						</div>
+						<form class="form faq__form" action="#">
+							<div class="form__inputs faq__inputs">
+								<input class="form__input faq__input" type="text" placeholder="Имя">
+								<input class="form__input faq__input" type="tel" placeholder="Телефон">
+							</div>
+							<button class="button faq__btn">Отправить</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="vertical-lines">
+				<span></span>
+				<span></span>
+			</div>
+		</section>
+		<!--End Section FAQ-->
+
+		<!--Section Contact-->
+		<section class="contact" id="contact">
+			<div class="contact__map" id="map"></div>
+			<div class="contact__window">
+				<h2 class="title contact__title">5. Контакты</h2>
+				<p class="contact__address" id="contact__address">г. Ярославль, проспект Октября, 88</p>
+				<a class="contact__email" href="mailto:art-aktiv.76@mail.ru">art-aktiv.76@mail.ru</a>
+				<a class="contact__phone" href="tel:+7920XXXXXXX">+7 (920) XXX XXX XX</a>
+			</div>
+		</section>
+		<!--End Section Contact-->
+
+		<!--End Footer-->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__content">
+					<a class="site-name" href="#">ООО «АртАктив», 2017 &copy;</a>
+					<a class="policy" href="#" target="_blank">Политика конфиденциальности</a>
+					<p class="designer">Designed by Sergey Strogiy</p>
+				</div>
+			</div>
+		</footer>
+		<!--End Footer-->
+
+		<!--Scroll Indicator-->
+		<div class="scroll-indicator">
+			<ul class="fix-nav">
+				<li><a class="circle circle__home" href="#home"><span></span></a></li>
+				<li><a class="circle circle__about" href="#about"><span></span></a></li>
+				<li><a class="circle circle__services" href="#services"><span></span></a></li>
+				<li><a class="minus minus__services-first" href="#services--first"><span></span></a></li>
+				<li><a class="minus minus__services-second" href="#services--second"><span></span></a></li>
+				<li><a class="minus minus__services-third" href="#services--third"><span></span></a></li>
+				<li><a class="circle circle__recall" href="#recall"><span></span></a></li>
+				<li><a class="circle circle__faq" href="#faq"><span></span></a></li>
+				<li><a class="circle circle__contact" href="#contact"><span></span></a></li>
+			</ul>
+		</div>
+		<!--End Scroll Indicator-->
+
 	</div>
 
 
 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+	<script src="js/map.js"></script>
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3TBcYXV2Hi9nzI-HtbPi_p1zNSUE0KIU&callback=initMap"></script>
 	<script src="js/hubslider.js"></script>
 	<script src="js/slick.min.js"></script>
+	<script src="js/button-animation.js"></script>
+	<script src="js/sliders-init.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
 

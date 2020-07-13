@@ -78,15 +78,16 @@
 	}
 	.mini-menu__cross {
 		span {
+			background: #b4b4b4;
 			&:nth-child(1) {
 				height: 30px;
-				transition-delay: 0.625s;
+				transition-delay: 0.4s;
 			}
 		}
 		span {
 			&:nth-child(2) {
 				width: 30px;
-				transition-delay: 0.375s;
+				transition-delay: 0.2s;
 			}
 		}
 	}
