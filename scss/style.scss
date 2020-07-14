@@ -16,7 +16,7 @@ html {
 	max-width: $width;
 	height: 100%;
 	position: relative;
-	background-image: url("../img/lines.png");
+	background-image: url("../img/lines.webp");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -231,11 +231,12 @@ html {
 	&__next {
 		@include flex(center, center);
 		cursor: pointer;
-		padding: 0;
+		padding: 10px;
 		border: none;
 		background: transparent;
 		transition: transform 0.2s;
 		i {
+			position: relative;
 			color: $purple-order;
 			margin: 0 4px 0 0;
 		}
@@ -246,17 +247,49 @@ html {
 			border-radius: 1px;
 			background-color: $purple-order;
 		}
-		&:hover {
-			transform: scale(1.3);
+	}
+	&__prev {
+		i {
+			&::after {
+				content: "\f053";
+				position: absolute;
+				font-family: "Font Awesome 5 Free";
+				font-weight: 900;
+				color: $red;
+				opacity: 0;
+				transition: 0.2s;
+				right: 0;
+			}
 		}
-		&:active {
-			transform: scale(1.1);
+		&:hover i::after {
+			opacity: 1;
+			right: 3px;
+		}
+		&:active i::after {
+			right: 6px;
 		}
 	}
 	&__next {
-		margin: 0 0 0 40px;
+		margin: 0 0 0 20px;
 		i {
 			margin: 0 0 0 4px;
+			&::after {
+				content: "\f054";
+				position: absolute;
+				font-family: "Font Awesome 5 Free";
+				font-weight: 900;
+				color: $red;
+				opacity: 0;
+				transition: 0.2s;
+				left: 0;
+			}
+		}
+		&:hover i::after {
+			opacity: 1;
+			left: 3px;
+		}
+		&:active i::after {
+			left: 6px;
 		}
 	}
 }
@@ -271,7 +304,7 @@ html {
 	transform: translate(-50%, -50%);
 	border-radius: 10px;
 	background-color: #8d3fd5;
-	background: url("../img/modal.png") center/cover no-repeat;
+	background: url("../img/modal.webp") center/cover no-repeat;
 	box-shadow: 0px 23px 32px 0px rgba(81, 8, 86, 0.33);
 	z-index: 1000;
 	padding: 40px 60px 55px;
@@ -354,7 +387,7 @@ html {
 .home {
 	position: relative;
 	min-height: 100vh;
-	background-image: url("../img/home/home-bg.png");
+	background-image: url("../img/home/home-bg.webp");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -733,32 +766,6 @@ html {
 	}
 }
 //! -------------------------------------------------------------------------------------------
-.about-image {
-	&__big {
-		display: block;
-		@media (max-width: 900px) {
-			display: none;
-		}
-	}
-	&__middle {
-		display: none;
-		@media (max-width: 900px) {
-			display: block;
-			margin: 0 auto;
-		}
-		@media (max-width: 600px) {
-			display: none;
-		}
-	}
-	&__small {
-		display: none;
-		@media (max-width: 600px) {
-			display: block;
-			margin: 0 auto;
-		}
-	}
-}
-//! -------------------------------------------------------------------------------------------
 .vertical-lines {
 	position: absolute;
 	bottom: -20px;
@@ -835,16 +842,12 @@ html {
 			}
 			@media (max-width: 900px) {
 				left: 35px;
-				top: -85px;
+				top: -75px;
 			}
 		}
 		&--second {
 			@media (max-width: 900px) {
 				left: 20px;
-			}
-			@media (max-width: 600px) {
-				left: 15px;
-				top: -55px;
 			}
 		}
 		&--third {
@@ -852,11 +855,15 @@ html {
 				left: -15px;
 			}
 			@media (max-width: 900px) {
-				left: 16px;
-				top: -73px;
+				left: 15px;
+				top: -75px;
 			}
+		}
+		&--first,
+		&--second,
+		&--third {
 			@media (max-width: 600px) {
-				left: 31px;
+				left: 25px;
 				top: -60px;
 			}
 		}
@@ -865,7 +872,7 @@ html {
 		max-width: 80%;
 		margin: 0 0 55px;
 		@media (max-width: 900px) {
-			max-width: 59%;
+			max-width: 70%;
 		}
 		@media (max-width: 600px) {
 			margin: 0 0 40px;
@@ -1507,7 +1514,7 @@ html {
 	}
 	&__order {
 		border-radius: 10px;
-		background: url("../img/faq/form-bg.png") 0 0 / cover no-repeat;
+		background: url("../img/faq/form-bg.webp") 0 0 / cover no-repeat;
 		box-shadow: 0px 23px 32px 0px rgba(81, 8, 86, 0.33);
 		padding: 40px 65px 43px 30px;
 		@include flex(flex-end, center);

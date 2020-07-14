@@ -84,7 +84,10 @@
 			<div class="container">
 				<div class="home__content">
 					<div class="home__image">
-						<img src="img/home/home-img.png" alt="Home_image">
+						<picture>
+							<source srcset="img/home/home-img.webp" type="image/webp">
+							<img src="img/home/home-img.png" alt="Home_image">
+						</picture>
 					</div>
 					<div class="home__text">
 						<h1 class="home__title">Размер<br>Не имеет<br>Значения!</h1>
@@ -98,7 +101,10 @@
 			</div>
 			<!--End Home content-->
 			<div class="mouse">
-				<img src="img/mouse.png" alt="Mouse_move">
+				<picture>
+					<source srcset="img/mouse.webp" type="image/webp">
+					<img src="img/mouse.png" alt="Mouse_move">
+				</picture>
 			</div>
 		</section>
 		<!--End Section Home-->
@@ -108,9 +114,14 @@
 			<div class="container">
 				<div class="about__body">
 					<div class="about__image about-image">
-						<img class="about-image__big" src="img/about/about-img-1170.png" alt="About_image">
-						<img class="about-image__middle" src="img/about/about-img-750.png" alt="About_image">
-						<img class="about-image__small" src="img/about/about-img-320.png" alt="About_image">
+						<picture>
+							<source media="(min-width: 901px)" srcset="img/about/webp/about-img-1170.webp" type="image/webp" sizes="100vw">
+							<source media="(min-width: 601px)" srcset="img/about/webp/about-img-750.webp" type="image/webp" sizes="100vw">
+							<source srcset="img/about/webp/about-img-320.webp" type="image/webp" sizes="100vw" style="margin: 0 auto">
+							<source media="(min-width: 901px)" srcset="img/about/png/about-img-1170.png" sizes="100vw">
+							<source media="(min-width: 601px)" srcset="img/about/png/about-img-750.png" sizes="100vw">
+							<img src="img/about/png/about-img-320.png" sizes="100vw" alt="About_image" style="margin: 0 auto">
+						</picture>
 					</div>
 					<div class="about__text">
 						<h2 class="title about__title">1. О нас</h2>
@@ -178,18 +189,18 @@
 							<div class="services__slider services-slider">
 								<a class="services-slider__slide" data-fancybox="gallery"
 									href="img/services/1rst-block/slide-image1.jpg">
-									<img class="services-slider__slide-img"
-										src="img/services/1rst-block/slide-image1.jpg" alt="Растяжка на ул. Ленина.">
+									<img class="services-slider__slide-img" src="img/services/1rst-block/slide-image1.jpg"
+										alt="Растяжка на ул. Ленина.">
 								</a>
 								<a class="services-slider__slide" data-fancybox="gallery"
 									href="img/services/1rst-block/slide-image2.jpg">
-									<img class="services-slider__slide-img"
-										src="img/services/1rst-block/slide-image2.jpg" alt="Баннер на ул. Октября.">
+									<img class="services-slider__slide-img" src="img/services/1rst-block/slide-image2.jpg"
+										alt="Баннер на ул. Октября.">
 								</a>
 								<a class="services-slider__slide" data-fancybox="gallery"
 									href="img/services/1rst-block/slide-image3.jpg">
-									<img class="services-slider__slide-img"
-										src="img/services/1rst-block/slide-image3.jpg" alt="Фото на холсте.">
+									<img class="services-slider__slide-img" src="img/services/1rst-block/slide-image3.jpg"
+										alt="Фото на холсте.">
 								</a>
 							</div>
 							<div class="services-slider__description">
@@ -213,8 +224,7 @@
 								<span>Есть вопросы?</span>
 								<span>Закажите консультацию</span>
 							</div>
-							<button
-								class="button services-first__btn services-first__btn--tablet-screen ">Заказать</button>
+							<button class="button services-first__btn services-first__btn--tablet-screen ">Заказать</button>
 						</div>
 					</div>
 				</div>
@@ -243,7 +253,10 @@
 						</div>
 					</div>
 					<div class="services-second__image">
-						<img src="img/services/2nd-block/interior.png" alt="">
+						<picture>
+							<source srcset="img/services/2nd-block/interior.webp" type="image/webp">
+							<img src="img/services/2nd-block/interior.png" alt="Services_Second_block_Interior">
+						</picture>
 					</div>
 				</div>
 				<div class="vertical-lines">
@@ -259,7 +272,7 @@
 					<div class="services__row services-third__row">
 						<div class="services__column services-third__column">
 							<div class="services__text">
-								<h2 class="services__number services-third__number">3</h2>
+								<h2 class="services__number services__number--third">3</h2>
 								<h3 class="subtitle services__subtitle">Оперативная полиграфия — от визитки до баннера
 								</h3>
 								<p class="paragraph services__paragraph services-third__paragraph">
@@ -280,7 +293,11 @@
 						</div>
 						<div class="services__column services-third__column">
 							<div class="services-third__image-letters">
-								<img src="img/services/3rd-block/03-1.png" alt="">
+								<picture>
+									<source srcset="img/services/3rd-block/03-1.webp" type="image/webp">
+									<img src="img/services/3rd-block/03-1.png" alt="Services_Third_block_Letters">
+								</picture>
+								
 							</div>
 						</div>
 						<div class="services__column services-third__column">
@@ -292,8 +309,7 @@
 								<form class="form services-third__form" action="#">
 									<div class="form__inputs services-third__inputs">
 										<input class="form__input services-third__input" type="text" placeholder="Имя">
-										<input class="form__input services-third__input" type="tel"
-											placeholder="Телефон">
+										<input class="form__input services-third__input" type="tel" placeholder="Телефон">
 									</div>
 									<button class="button services-third__btn">Отправить</button>
 								</form>
@@ -444,7 +460,10 @@
 					</div>
 				</div>
 				<div class="order faq__order">
-					<img class="faq__order-img" src="img/faq/01-1170.png" alt="">
+					<picture>
+						<source srcset="img/faq/01-1170.webp" type="image/webp">
+						<img class="faq__order-img" src="img/faq/01-1170.png" alt="FAQ_Question_image">
+					</picture>
 					<div class="faq__order-content">
 						<div class="order__question faq__order-question">
 							<span>Остались вопросы?</span>
